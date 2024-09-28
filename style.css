@@ -1,0 +1,345 @@
+ /* General Body and Container Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/045/677/432/small_2x/workspace-with-notepad-pencil-and-glasses-flatlay-composition-top-view-banner-place-for-your-text-photo.jpg");
+   /* background-image:url('https://img.freepik.com/premium-photo/school-office-supplies-stationery-green-board-templet_776894-208544.jpg');*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    margin-right: 800px;
+    background: linear-gradient(rgba(29, 143, 118, 0.966), #155c4a, #07554be5);;
+    border-radius: 5px;
+    box-shadow: 8px 8px 12px rgb(49, 47, 47);
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #edf1f5;
+    font-size: 2.5rem; /* Slightly increased font size for more emphasis */
+    font-weight: 700; /* Bolder weight for better impact */
+    margin-bottom: 30px;
+    letter-spacing: 3px; /* Adds spacing between letters */
+    text-transform: uppercase; /* Makes the text look more prominent */
+    
+    /* Add some text-shadow to give a glowing effect */
+    text-shadow: 2px 2px 5px rgba(230, 223, 223, 0.5), 
+                 2px 0 10px rgba(236, 230, 230, 0.3),
+                 2px 2px 20px rgba(240, 232, 232, 0.2);
+
+    /* Animation properties */
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                     0 0 10px rgba(255, 255, 255, 0.3),
+                     0 0 20px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly increases the size */
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                     0 0 20px rgba(255, 255, 255, 0.5),
+                     0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+h2 {
+    font-size: 1.6rem;
+    color: rgb(228, 222, 222);
+    text-align: left;
+    margin-bottom: 15px;
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 5px;
+    font-weight: 9em;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: inset 4px 2px 4px rgba(27, 25, 25, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: white;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #19463ccc;
+    color: white;
+    border: 0 0 1px 1px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f6651;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
+
+/* Filter Buttons */
+.filters {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: 1px 1px 1px solid white;
+    background-color: rgba(236, 224, 224, 0.007);
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all
+}
+/* Task List Styling */
+.task-list {
+    max-height: 320px; /* Set a maximum height for the task list, assuming 5 tasks */
+    overflow-y: auto; /* Enable vertical scrolling when the content exceeds the height */
+   color:white;
+   border-bottom: 1px solid #ddd;
+    padding-left: 20px; /* Give some padding to align tasks nicely */
+}
+
+.task-list li {
+    padding: 10px 0;
+    
+    word-wrap: break-word; /* Break words that are too long */
+    overflow: hidden; /* Hide the overflow text if it's too long */
+}
+
+.task-list li.completed {
+    text-decoration: line-through;
+    color: white;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/* Scrollbar Styling */
+.task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background-color: #e8ecf0;
+    border-radius: 5px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+
+/* For larger desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .container {
+        width: 50%;
+        margin-left: 20%; /* Slightly to the left */
+    }
+}
+
+/* For laptops (between 992px and 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 60%;
+        margin-left: 15%; /* Slightly to the left */
+    }
+}
+
+/* For tablets and small laptops (between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    button {
+        width: 25%;
+    }
+}
+
+/* For large phones and small tablets (between 481px and 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+}
+
+/* For mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;/* Task List Styling */
+        .task-list {
+            max-height: 320px; /* Set a maximum height for the task list, assuming 5 tasks */
+            overflow-y: auto; /* Enable vertical scrolling when the content exceeds the height */
+            color: white;
+            border-bottom: 1px solid #ddd;
+            padding-left: 20px; /* Give some padding to align tasks nicely */
+        }
+        
+        /* Style each task item */
+        .task-list li {
+            display: flex; /* Flexbox for horizontal alignment */
+            justify-content: space-between; /* Space between text and buttons */
+            align-items: center; /* Vertically center the buttons and text */
+            padding: 10px 0;
+            word-wrap: break-word; /* Break words that are too long */
+            overflow: hidden; /* Hide the overflow text if it's too long */
+            border-bottom: 1px solid #ddd; /* Add a subtle bottom border for each task */
+        }
+        
+        /* Completed task style */
+        .task-list li.completed {
+            text-decoration: line-through;
+            color: white;
+        }
+        
+        /* Styling for task actions (buttons) */
+        .task-actions {
+            display: flex;
+            gap: 10px; /* Spacing between buttons */
+        }
+        
+        /* Individual button styling */
+        .task-actions button {
+            background-color: #edf1f5;
+            color: #333;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .task-actions button:hover {
+            background-color: #d1d8e0;
+        }
+        
+        /* Specific button colors */
+        .task-actions .complete-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .task-actions .delete-btn {
+            background-color: #ff4757;
+            color: white;
+        }
+        
+        .task-actions .edit-btn {
+            background-color: #ffa502;
+            color: white;
+        }
+        
+        /* Scrollbar Styling */
+        .task-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .task-list::-webkit-scrollbar-thumb {
+            background-color: #e8ecf0;
+            border-radius: 5px;
+        }
+        
+        .task-list::-webkit-scrollbar-track {
+            background-color: #f0f0f0;
+        }
+        
+        /* Make it responsive */
+        @media (max-width: 600px) {
+            .task-list li {
+                flex-direction: column; /* Stack the task text and buttons on small screens */
+                align-items: flex-start; /* Align items to the start of the list item */
+            }
+        
+            .task-actions {
+                margin-top: 5px; /* Add some margin when stacked vertically */
+            }
+        }
+        
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    input, button {
+        font-size: 16px;
+    }
+
+    /* Stack buttons vertically */
+    .input-section {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+ /* adding things here*/
+
+ 
